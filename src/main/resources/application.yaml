@@ -1,0 +1,39 @@
+server:
+  port: 28000
+  servlet:
+    context-path: /work-chat
+qywx:
+  application-list:
+    - secret: LKZzALJ6gutMfhPPrrLKRjUAvjBUcqW9_avoKCVDqiM
+      application-name: mission
+      application-desc: MECS
+      agent-id: 1000002
+    - secret: zqf6Rq4C--XVs9uVJ2qfgYYlCJDisXtdgwVaG3Lgb8k
+      application-name: weather
+      application-desc: MECS
+      agent-id: 1000003
+  url: https://qyapi.weixin.qq.com
+  public-path: cgi-bin
+  corp-id: ww4170f56586b1f92b
+  callback-list:
+    - application-name: mission
+      token: aUmlOXdHAljRYggZPLqyfQ
+      encoding-aes-key: IGT5MKyq4fKSkTM6bwjvrg8ca1X56dGZ1XcAO6IniGw
+      receive-id: ww4170f56586b1f92b
+  debug-mode: false
+#logging:
+#  level:
+#    root: warn
+#    com.github.shuaidd: debug
+spring:
+  profiles:
+    active: dev
+  redis:
+    database: 0
+    host: 82.157.198.134
+    port: 36379
+    password: Redis!!mecs2389@Acc
+  cache:
+    type: redis
+  application:
+    name: qywx-example
